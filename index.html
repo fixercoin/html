@@ -1,175 +1,383 @@
- 
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Header Moderno</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#4F46E5',
-            accent: '#F59E0B',
-          },
-          boxShadow: {
-            '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
-          },
-          animation: {
-            'banner-pulse': 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'slide-down': 'slideDown 0.5s ease-out'
-          },
-          keyframes: {
-            slideDown: {
-              '0%': { transform: 'translateY(-100%)' },
-              '100%': { transform: 'translateY(0)' },
-            }
-          }
-        },
-      },
-    };
-  </script>
+  <header>
+    <div class="navbar">
+        <img src="fixer-coin.png" alt="FoodieOnSol Logo" class="logo">
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#tokenomics">TOKENOMICS</a></li>
+                <li><a href="#roadmap">ROADMAP</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+                <li><a href="#disclaimer">HOW TO BUY </a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
-<body class="bg-gray-100 text-gray-900">
 
-  <!-- Banner animado -->
-  <div id="promo-banner" class="fixed top-0 left-0 w-full bg-gradient-to-r from-primary to-accent text-white z-[60] backdrop-blur-md animate-slide-down">
-    <div class="container mx-auto px-6 py-2 flex items-center justify-between">
-      <div class="flex items-center space-x-2">
-        <span class="animate-banner-pulse">🎉</span>
-        <p class="text-sm">¡Oferta especial! Aprovecha un <strong>30% de descuento</strong> hoy mismo</p>
-      </div>
-      <button id="close-banner" class="hover:bg-white/10 p-1 rounded-full transition">
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-        </svg>
-      </button>
+<head>
+<section class="hero">
+    <div class="hero-text">
+        <h1>FIXERCOIN </h1>
+        <p>DIGITAL CURRENCY </p>
     </div>
-  </div>
-
-  <!-- Header moderno mejorado -->
-  <header class="bg-white/95 backdrop-blur-lg shadow-xl fixed top-8 left-0 w-full z-50 transition-all duration-300 border-b border-white/20">
-    <div class="container mx-auto px-6 py-4 flex items-center justify-between">
-      <!-- Logo con más blur -->
-      <a href="#" class="text-2xl font-bold text-primary flex items-center space-x-3 group backdrop-blur-sm">
-        <svg class="w-7 h-7 group-hover:rotate-45 transition-transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"/>
-        </svg>
-        <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">MiMarca</span>
-      </a>
-
-      <!-- Menú de navegación -->
-      <nav id="menu" class="hidden md:flex space-x-8 items-center backdrop-blur-sm bg-white/30 rounded-xl px-4">
-        <a href="#" class="relative text-gray-600 hover:text-primary transition-colors group">
-          <span>Inicio</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></div>
-        </a>
-        <a href="#" class="relative text-gray-600 hover:text-primary transition-colors group">
-          <span>Servicios</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></div>
-        </a>
-        <a href="#" class="relative text-gray-600 hover:text-primary transition-colors group">
-          <span>Proyectos</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></div>
-        </a>
-        <a href="#" class="relative text-gray-600 hover:text-primary transition-colors group">
-          <span>Contacto</span>
-          <div class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary transition-all group-hover:w-full"></div>
-        </a>
-        <a href="#" class="bg-accent hover:scale-105 text-white py-2 px-6 rounded-xl shadow-lg hover:shadow-accent/30 transition-all backdrop-blur-sm">
-          Contratar
-        </a>
-      </nav>
-
-      <!-- Botón de menú hamburguesa -->
-      <button id="menu-button" class="block md:hidden focus:outline-none group">
-        <div class="space-y-1.5 transform transition-all duration-300">
-          <span class="block w-6 h-0.5 bg-primary transition-transform group-[.active]:rotate-45 group-[.active]:translate-y-2"></span>
-          <span class="block w-6 h-0.5 bg-primary transition-opacity group-[.active]:opacity-0"></span>
-          <span class="block w-6 h-0.5 bg-primary transition-transform group-[.active]:-rotate-45 group-[.active]:-translate-y-2"></span>
-        </div>
-      </button>
-    </div>
-
-    <!-- Menú móvil con efecto cristal -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-lg border-t border-white/20">
-      <nav class="space-y-4 p-6">
-        <a href="#" class="block text-lg text-gray-600 hover:text-primary hover:bg-gray-50/30 p-3 rounded-xl transition">Inicio</a>
-        <a href="#" class="block text-lg text-gray-600 hover:text-primary hover:bg-gray-50/30 p-3 rounded-xl transition">Servicios</a>
-        <a href="#" class="block text-lg text-gray-600 hover:text-primary hover:bg-gray-50/30 p-3 rounded-xl transition">Proyectos</a>
-        <a href="#" class="block text-lg text-gray-600 hover:text-primary hover:bg-gray-50/30 p-3 rounded-xl transition">Contacto</a>
-        <a href="#" class="block bg-accent/90 hover:bg-accent text-white text-lg py-3 px-6 rounded-xl shadow-lg transition text-center backdrop-blur-sm">
-          Contratar
-        </a>
-      </nav>
-    </div>
-  </header>
-
-  <!-- Contenido principal -->
-  <main class="pt-40">
-    <section class="container mx-auto px-6 py-12">
-      <h1 class="text-5xl font-bold text-gray-800 mb-6">Bienvenido a nuestro sitio</h1>
-      <p class="text-lg text-gray-600 leading-relaxed">
-        Descubre un diseño moderno con efectos de cristal y animaciones fluidas.
-      </p>
-    </section>
-      <!-- Sección 4: Tarjetas interactivas -->
-<section class="sticky top-0 z-20 bg-gradient-to-br from-primary/5 to-accent/5 py-20">
-  <div class="container mx-auto px-6">
-    <h2 class="text-3xl font-bold text-gray-800 mb-12 text-center">Características Destacadas</h2>
-    
-    <div class="grid md:grid-cols-3 gap-8">
-      <!-- Tarjeta 1 -->
-      <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div class="p-8">
-          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Rendimiento Ultra-rápido</h3>
-          <p class="text-gray-600">Optimización avanzada con tecnología de última generación.</p>
-        </div>
-        <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary/20 rounded-2xl transition-all"></div>
-      </div>
-
-      <!-- Tarjeta 2 -->
-      <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div class="p-8">
-          <div class="w-14 h-14 bg-accent/10 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Personalización Total</h3>
-          <p class="text-gray-600">Adapta cada detalle a tus necesidades específicas.</p>
-        </div>
-        <div class="absolute inset-0 border-2 border-transparent group-hover:border-accent/20 rounded-2xl transition-all"></div>
-      </div>
-
-      <!-- Tarjeta 3 -->
-      <div class="group relative bg-white rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-        <div class="p-8">
-          <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-            <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-            </svg>
-          </div>
-          <h3 class="text-xl font-bold text-gray-800 mb-3">Seguridad Avanzada</h3>
-          <p class="text-gray-600">Protección de nivel enterprise para tus datos.</p>
-        </div>
-        <div class="absolute inset-0 border-2 border-transparent group-hover:border-primary/20 rounded-2xl transition-all"></div>
-      </div>
-    </div>
-  </div>
 </section>
-  </main>
 
-  <!-- Script mejorado -->
-  <script>
+<section id="about">
+    <div class="content-wrapper">
+        <h3>FIXERCOIN </h3>
+        <p style="font-size: 12px;">FIXERCOIN IS A UNIQUE MEME COIN PROJECT ON THE SOLANA BLOCKCHAIN DESIGNED TO CREATE A VIBRANT AND ENGAGING COMMUNITY AROUND THE CRYPTO . OUR MISSION IS TO BRING BUSINESS OPPORTUNITY AND EXCITEMENT TO THE CRYPTO SPACE WHILE PROVIDING REAL VALUE AND UTILITY TO OUR USERS</p>
 
-  </script>
+        
 
-</body>
-</html>
+ <h3>INTRODUCTION</h3>
+  
+        
+        <p style="font-size: 12px;">IN A WORLD WHERE DIGITAL ASSETS MERGE  FIXERCOIN STANDS OUT AS A MEME COIN THAT CELEBRATES CULINARY DELIGHTS AND UTILIZES THE FAST AND EFFICIENT SOLANA BLOCKCHAIN . OUR GOAL IS TO BUILD A STRONG  ACTIVE COMMUNITY OF CRYPTO ENTHUSIASTS WHO CAN ENGAGE  SHARE  AND EARN TOGETHER</p>
+
+        
+
+  <h3>VISION & FUTURE MISSION</h3>
+
+        
+        <p style="font-size: 12px;"><strong>🔹</strong> TO BE THE LEADING MEME COIN ON THE SOLANA BLOCKCHAIN  KNOWN FOR IT'S VIBRANT COMMUNITY AND INNOVATIVE APPROACH TO COMMUNITY ENGAGEMENT AND REWARDS</p>
+        <p style="font-size: 12px;"><strong>🔹</strong> TO CREATE AN ECOSYSTEM WHERE USERS CAN EARN  TRADE  AND ENJOY THE BENEFITS OF A DECENTRALIZED  CRYPTOCURRENCY WHILE ACTIVELY CONTRIBUTING TO THE GROWTH AND VISIBILITY OF THE PROJECT</p>
+    </div>
+</section>
+
+<section id="tokenomics">
+    <div class="content-wrapper">
+        
+
+  <h3>TOKENOMICS DETAIL</h3>
+  
+       
+    
+    
+        <ul >
+            <li style="font-size: 12px;"><strong>TOKEN NAME:</strong> FIXERCOIN</li>
+            <li style="font-size: 12px;"><strong>SYMBOL:</strong> FIXERCOIN</li>
+            <li style="font-size: 12px;"><strong>NETWORK:</strong> SOLANA</li>
+            <li style="font-size: 12px;"><strong>TOTAL SUPPLY:</strong> 1,000,000,000 FIXERCOIN</li>
+            <li style="font-size: 12px;"><strong>AUTO BURNING CYCLE:</strong> 20% (200,000,000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>PRESALE ALLOCATION:</strong> 20% (200,000,000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>LIQUIDITY POOL AND CEX LISTING:</strong> 20% (200,000,000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>TOKEN BURNING MECHANISM :</strong> 20% (200,000,000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>COMMUNITY AIRDROP:</strong> 5% (50, 000, 000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>TREASURY AND DEVELOPMENT FUNDS:</strong> 5% (50,000,000 FIXERCOIN)</li>
+            <li style="font-size: 12px;"><strong>TEAM & DEV:</strong> 10% (100,000,000 FIXERCOIN)</li>
+          <div class="content-wrapper">
+  
+    <!-- Tokenomics information goes here -->
+
+    <!-- Pie chart container -->
+  
+    <canvas id="tokenomicsChart" width="400" height="400"></canvas>
+</div>
+
+        </ul>
+    
+     
+
+  <h3>AIRDROP & TEAM ALLOCATION - VESTING</h3>
+
+      
+   
+    
+     
+       
+        <table >
+            <tr>
+                <th>PHASE</th>
+                <th>DETAIL</th>
+                <th>ALLOCATION</th>
+                <th>CLIFF PERIOD</th>
+                <th>VESTING PERIOD</th>
+            </tr>
+            <tr>
+                <td>AIRDROP PHASE 1</td>
+                <td>PRESALE PARTICIPANTS AIRDROP</td>
+                <td>30% OF AIRDROP ALLOCATION</td>
+                <td>NO CLIFF</td>
+                <td>6 MONTHS</td>
+            </tr>
+            <tr>
+                <td>AIRDROP PHASE 2</td>
+                <td>GENERAL COMMUNITY AIRDROP</td>
+                <td>15% OF AIRDROP ALLOCATION</td>
+                <td>NO CLIFF</td>
+                <td>NO VESTING</td>
+            </tr>
+            <tr>
+                <td>AIRDROP PHASE 3</td>
+                <td>ACTIVE COMMUNITY CONTRIBUTORS</td>
+                <td>20% OF  AIRDROP ALLOCATION</td>
+                <td>NO o CLIFF</td>
+                <td>3 MONTHS</td>
+            </tr>
+            <tr>
+                <td>AIRDROP PHASE 4</td>
+                <td>FIXERCOIN HOLDERS AIRDROP</td>
+                <td>30% OF AIRDROP ALLOCATION</td>
+                <td>1 MONTH CLIFF</td>
+                <td>6 MONTHS</td>
+            </tr>
+            <tr>
+                <td>TEAM'S ALLOCATION</td>
+                <td> </td>
+                <td>5% TOTAL SUPPLY</td>
+                <td>3 MONTHS</td>
+                <td>12 MONTHS</td>
+              </tr>
+            
+        </table>
+    </div>
+</section>
+
+<section id="roadmap">
+    <div class="content-wrapper">
+        
+
+  <h3>FIXERCOIN ROADMAP</h3>
+
+
+            <ul>
+            <li style="font-size: 12px;"><strong>Phase 1:</strong> 
+              <p style="font-size: 12px;">✓ LAUNCH OF TWITTER ACCOUNT </p> 
+              <p style="font-size: 12px;">✓ DEVELOPMENT AND LAUNCH OF WEBSITE</p>
+              <p style="font-size: 12px;">✓ DEPLOYMENT OF SMART CONTRACTS</li>
+         <p style="font-size:12px"> ✓ H4qKn8FMFha8jJuj8xMryMqRhH3h7GjLuxw7TVixpump</p>
+            <li style="font-size: 12px;"><strong>PHASE 2:</strong> 
+              <p style="font-size: 12px;">• TOKEN PRESALE</p>
+              <p style="font-size: 12px;">• AUTO BURNING AT COMPLETE CURVE</p>
+             <p style="font-size: 12px;">• BURNING MECHANISM WILL START</p>
+              <p style="font-size: 12px;">• LISTING FIXERCOIN ON DECENTRALIZED EXCHANGES</p>
+              <p style="font-size: 12px;">• LAUNCH OF DISCORD SERVER</p>
+              <p style="font-size: 12px;">• LAUNCH OF COMMUNITY ENGAGEMENT INITIATIVES</p></li>
+            <li style="font-size: 12px;"><strong>PHASE 3:</strong>
+              <p style="font-size: 12px;">• EXPANSION OF MARKETING</p>
+              <p style="font-size: 12px;">• LAUNCH OF TIKTOK , INSTAGRAM AND YOUTUBE</p>
+              <p style="font-size: 12px;">• FORMATION OF STRATEGIC PARTNERSHIPS</p>
+              <p style="font-size: 12px;">• DEVELOPMENT AN LAUNCH OF GAMING PLATFORM (BETA PHASE). </p>
+              <p style="font-size: 12px;">• LAUNCHING OF ADDITIONAL FEATURES AND UTILITIES FOR  HOLDERS.</p>
+              </li>
+            <li style="font-size: 12px;"><strong>PHASE 4:</strong> 
+              <p style="font-size: 12px;">• LAUNCH of FIXERCOIN NEWSLETTER</p>
+              <p style="font-size: 12px;">• DEVELOPMENT AND RELEASE OF GAMING PLATFORM (MAIN PHASE) </p>               
+              <p style="font-size: 12px;">• INTEGRATION OF NFT FOR FIXERCOIN GAMER REVENUE GENERATION.</p> 
+              <p style="font-size: 12px;">• FURTHER AIRDROP PHASES.</p>
+              </li>
+          <li style="font-size: 12px;"><strong>PHASE 5:</strong>
+            <p style="font-size: 12px;">• LAUNCH OF FIXERCOIN ACADEMY</p>
+            <p style="font-size: 12px;">• TOP TIER 1 EXCHANGE LISTING</p>
+            <p style="font-size: 12px;">• CONTINUOUS MARKETING AND COMMUNITY ENGAGEMENT INITIATIVES </p>
+        </ul>
+    </div>
+</section>
+
+</section>
+<section id="disclaimer">
+  <div class="disclamer-section">
+         
+
+  <h3>HOW TO BUY FIXERCOIN AT PHONTOM WALLET</h3>
+  
+
+         </button>
+  <p style="font-size: 12px;">
+   DOWNLOAD PHONTOM WALLET - SIGNUP OR CREATE ACCOUNT WITH GMAIL ID - GO IN SEARCH BAR - COPY THIS LINK (https://pump.fun/coin/H4qKn8FMFha8<br>jJuj8xMryMqRhH3h7GjLuxw7TVixpump) AND PASTE IN SEARCH BAR & PRESS SEARCH - AT PUMP.FUN PAGE CONNECT WALLET & CONFIRM - SELECT OR WRITE SOL AMOUNT & PRESS BUY BUTTON 
+    </p>
+<footer id="contact">
+    <div class="footer-content">
+        <div class="social-links">
+            <a href="https://x.com/fixercoin" target="_blank"><img src="https://i.imgur.com/DGB97Yb.jpeg" alt="X (Twitter)" class="social-icon"></a>
+            
+            <a href="https://t.me/fixercoinchat" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Group" class="social-icon"></a>
+            <a href="https://t.me/fixercoininfo " target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Announcement" class="social-icon"></a>
+        </div>
+        <p style="font-size: 12px;">&copy; 2025 FIXERCOIN. ALL RIGHTS RESERVED.</p>
+        <a href="#" class="disclaimer-link">DISCLAIMER</a>
+    </div>
+</footer>
+
+   <style>
+     body {
+    font-family: Arial, arial;
+    margin: 0;
+    padding: 0;
+    background-image: url('');
+    background-size: cover;
+    color: black;
+}
+
+header {
+    background: rgba(0, 0, 255, 0.9);
+    padding: 20px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: blue;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: white;
+    color: blue;
+}
+
+.hero {
+    background: rgba(0, 0, 255, 0.5);
+    padding: 100px 20px;
+    text-align: center;
+    color: #f8f8f8; /* Slightly off-white for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a shadow to the text */
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    padding: 50px 20px;
+    background: rgba(254, 254, 254, 0.9);
+    margin: 20px 0;
+    border-radius: 10px;
+    color: black;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 10px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+/* Style for the conclusion section */
+.conclusion-section {
+    padding: 20px;
+    background-color: rgba(255, 254, 255, 0.8); /* Light grey background */
+    color: #333; /* Darker text color */
+    border-top: 2px solid #000; /* Optional border at the top */
+    text-align: center;
+}
+
+.conclusion-section h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.conclusion-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 800px; /* Width of the paragraph */
+}
+
+/* Style for Disclaimer Section */
+#disclaimer {
+    background-color: rgba(255, 254, 255, 0.9); /* Light background color to differentiate the section */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#disclaimer h2 {
+    color: #1d2f6f; /* Blue color for headers */
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+#disclaimer p {
+    color: #333333; /* Darker color for text */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+.footer-content {
+    padding: 20px;
+    color: #f8f8f8; /* Slightly off-white for better contrast */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds a shadow to the text */
+}
+
+.social-links {
+    margin-bottom: 10px;
+}
+
+.social-icon {
+    width: 30px;
+    height: auto;
+    margin: 0 10px;
+}
+
+.disclaimer-link {
+    color: #f8f8f8; /* Slightly off-white for better contrast */
+    text-decoration: none;
+}
+
+.disclaimer-link:hover {
+    text-decoration: underline;
+}
+   </style>
